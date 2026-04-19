@@ -12,7 +12,8 @@ The mechanical subsystem is designed to securely transport and fire ping pong ba
 - A **dual-flywheel launcher** integrated directly into the robot's internal structural layers to ensure a straight, spin-free launch.
 - A low-profile design that maintains the LiDAR sensor unobstructed by any components
 
-**[Insert isometric CAD render showing the fully assembled TurtleBot with the mechanical payload]**
+<img width="1280" height="777" alt="image" src="https://github.com/user-attachments/assets/d2ed7feb-8f65-4411-8ea1-2562ba36208a" />
+
 
 ---
 
@@ -56,11 +57,13 @@ Our final design is the result of testing and refining several prototypes to sol
 ### Iteration 1: Front-Mounted Launcher with Full Spiral Storage
 - **Design:** A full spiral ball storage track feeding into a launcher mounted at the very front of the TurtleBot.
 - **Problem:** The robot became heavily front-biased, risking tipping. Additionally, feeding the ball to the front required a sharp 90-degree bend in the internal tubing, which caused severe jamming and made the feeding mechanism overly complex.
+<img width="990" height="663" alt="image" src="https://github.com/user-attachments/assets/a5e292b3-d6ff-444d-b4eb-a39eae140c16" />
 
 
 ### Iteration 2: Side-Mounted Launcher with 0.75x Spiral
 - **Design:** We reduced the spiral to 0.75 revolutions so the track ended in a straight path. We extended this path to a side-mounted launcher pointing forward.
 - **Problem:** This resulted in an asymmetrical footprint (the robot was "fat" on one side). This extra width severely limited the robot's ability to navigate tight maze corridors and made aligning for docking highly inconsistent.
+<img width="969" height="728" alt="image" src="https://github.com/user-attachments/assets/66fe63d9-73c0-47c5-9afa-0e839847a56b" />
 
 
 ### Iteration 3: Centered & Layer-Integrated
