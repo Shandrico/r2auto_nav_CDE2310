@@ -10,7 +10,7 @@ The mechanical subsystem is designed to securely transport and fire ping pong ba
 - A **compact, internally mounted launching mechanism** that securely holds the flywheel and feeder in between the robot's structural layers.
 - A **gravity-assisted, servo-controlled feeder** with a rotating arm for precise, single-ball release.
 - A **dual-flywheel launcher** integrated directly into the robot's internal structural layers to ensure a straight, spin-free launch.
-- A low-profile design that maintains the **LiDAR sensor in its original, unobstructed position**.
+- A low-profile design that maintains the LiDAR sensor unobstructed by any components
 
 **[Insert isometric CAD render showing the fully assembled TurtleBot with the mechanical payload]**
 
