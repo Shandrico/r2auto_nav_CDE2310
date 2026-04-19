@@ -12,7 +12,7 @@ The mechanical subsystem is designed to securely transport and fire ping pong ba
 - A **dual-flywheel launcher** integrated directly into the robot's internal structural layers to ensure a straight, spin-free launch.
 - A low-profile design that maintains the LiDAR sensor unobstructed by any components
 
-<img width="1280/6" height="777/2" alt="image" src="https://github.com/user-attachments/assets/d2ed7feb-8f65-4411-8ea1-2562ba36208a" />
+<img width="1280/6" height="777" alt="image" src="https://github.com/user-attachments/assets/d2ed7feb-8f65-4411-8ea1-2562ba36208a" />
 
 
 ---
