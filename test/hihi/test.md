@@ -7,10 +7,10 @@ This document outlines the design, iteration, and assembly of the custom payload
 ## 1. System Overview
 
 The mechanical subsystem is designed to securely transport and fire ping pong balls into a docking receptacle. The system consists of:
-* A **compact, internally mounted ball storage module** that securely holds 9 balls between the robot's structural layers.
-* A **gravity-assisted, servo-controlled feeder** with a rotating arm for precise, single-ball release.
-* A **dual-flywheel launcher** integrated directly into the robot's internal structural layers to ensure a straight, spin-free launch.
-* A low-profile design that maintains the **LiDAR sensor in its original, unobstructed position**.
+- A **compact, internally mounted ball storage module** that securely holds 9 balls between the robot's structural layers.
+- A **gravity-assisted, servo-controlled feeder** with a rotating arm for precise, single-ball release.
+- A **dual-flywheel launcher** integrated directly into the robot's internal structural layers to ensure a straight, spin-free launch.
+- A low-profile design that maintains the **LiDAR sensor in its original, unobstructed position**.
 
 **[Insert isometric CAD render showing the fully assembled TurtleBot with the mechanical payload]**
 
@@ -19,10 +19,10 @@ The mechanical subsystem is designed to securely transport and fire ping pong ba
 ## 2. Problem Description & Design Requirements
 
 To successfully complete the docking and firing tasks, the mechanical subsystem had to satisfy several strict constraints:
-* **Payload Capacity:** Store exactly nine 2.7g ping pong balls securely without them escaping during dynamic motion or inclined navigation.
-* **Dimensional Constraints:** Maintain a narrow overall footprint to ensure the robot can navigate tight maze environments without collision.
-* **Sensor Clearance:** Ensure zero obstruction to the 360° field of view of the LDS-02 LiDAR without requiring external sensor mounts or height modifications.
-* **Launch Kinematics:** Fire balls horizontally across a 15–25 cm docking gap with minimal vertical drop, ensuring they land cleanly inside a receptacle positioned at 149.5 mm from the ground.
+- **Payload Capacity:** Store exactly nine 2.7g ping pong balls securely without them escaping during dynamic motion or inclined navigation.
+- **Dimensional Constraints:** Maintain a narrow overall footprint to ensure the robot can navigate tight maze environments without collision.
+- **Sensor Clearance:** Ensure zero obstruction to the 360° field of view of the LDS-02 LiDAR without requiring external sensor mounts or height modifications.
+- **Launch Kinematics:** Fire balls horizontally across a 15–25 cm docking gap with minimal vertical drop, ensuring they land cleanly inside a receptacle positioned at 149.5 mm from the ground.
 
 ---
 
@@ -54,19 +54,19 @@ All components are designed to work within a compact 3D-printed housing system. 
 Our final design is the result of testing and refining several prototypes to solve critical stability and spatial issues.
 
 ### Iteration 1: Front-Mounted Launcher with Full Spiral Storage
-* **Design:** A full spiral ball storage track feeding into a launcher mounted at the very front of the TurtleBot.
-* **Problem:** The robot became heavily front-biased, risking tipping. Additionally, feeding the ball to the front required a sharp 90-degree bend in the internal tubing, which caused severe jamming and made the feeding mechanism overly complex.
+- **Design:** A full spiral ball storage track feeding into a launcher mounted at the very front of the TurtleBot.
+- **Problem:** The robot became heavily front-biased, risking tipping. Additionally, feeding the ball to the front required a sharp 90-degree bend in the internal tubing, which caused severe jamming and made the feeding mechanism overly complex.
 
 ### Iteration 2: Side-Mounted Launcher with 0.75x Spiral
-* **Design:** We reduced the spiral to 0.75 revolutions so the track ended in a straight path. We extended this path to a side-mounted launcher pointing forward.
-* **Problem:** This resulted in an asymmetrical footprint (the robot was "fat" on one side). This extra width severely limited the robot's ability to navigate tight maze corridors and made aligning for docking highly inconsistent.
+- **Design:** We reduced the spiral to 0.75 revolutions so the track ended in a straight path. We extended this path to a side-mounted launcher pointing forward.
+- **Problem:** This resulted in an asymmetrical footprint (the robot was "fat" on one side). This extra width severely limited the robot's ability to navigate tight maze corridors and made aligning for docking highly inconsistent.
 
 ### Iteration 3 (Final): Centered & Layer-Integrated
-* **Design:** We abandoned the spiral storage concept entirely. We centered the dual-flywheel launching mechanism and embedded a compact ball storage module tightly between the TurtleBot's structural plates. 
-* **Result:** This eliminated the asymmetrical width, completely resolved the 90-degree feed jamming issue, and perfectly balanced the center of gravity. Furthermore, the internal embedding successfully prevented any vertical stacking that would block the LiDAR, eliminating the need to modify the sensor's stock height.
+- **Design:** We abandoned the spiral storage concept entirely. We centered the dual-flywheel launching mechanism and embedded a compact ball storage module tightly between the TurtleBot's structural plates. 
+- **Result:** This eliminated the asymmetrical width, completely resolved the 90-degree feed jamming issue, and perfectly balanced the center of gravity. Furthermore, the internal embedding successfully prevented any vertical stacking that would block the LiDAR, eliminating the need to modify the sensor's stock height.
 
 ### Minor Refinements
-* **Structural Flexing:** The added custom layer introduced slight flex. **Fix:** Reinforced the 3D-printed supports and anchored everything using standard M4 fasteners.
+- **Structural Flexing:** The added custom layer introduced slight flex. **Fix:** Reinforced the 3D-printed supports and anchored everything using standard M4 fasteners.
 
 **[Insert an image showing a side-by-side comparison of the early asymmetrical prototype vs. the final centered layout]**
 
@@ -76,17 +76,17 @@ Our final design is the result of testing and refining several prototypes to sol
 
 The flywheel system was engineered based on the exact physics required to cross the docking gap.
 
-* **Launcher Exit Height:** 151.0 mm
-* **Receptacle Height:** 149.5 mm
-* **Vertical Drop ($\Delta y$):** 1.5 mm
-* **Target Horizontal Range ($d$):** 15 cm to 25 cm
+- **Launcher Exit Height:** 151.0 mm
+- **Receptacle Height:** 149.5 mm
+- **Vertical Drop ($\Delta y$):** 1.5 mm
+- **Target Horizontal Range ($d$):** 15 cm to 25 cm
 
 Assuming a perfectly horizontal launch, the time of flight ($t$) before the ball drops 1.5 mm is calculated using gravity ($g = 9.81 \text{ m/s}^2$):
 $t = \sqrt{\frac{2\Delta y}{g}} \approx 0.0175 \text{ s}$
 
 To cross the docking gap within this short time frame, the required horizontal velocity ($v_x = \frac{d}{t}$) is:
-* **For 15 cm range:** $\approx 8.6 \text{ m/s}$
-* **For 25 cm range:** $\approx 14.3 \text{ m/s}$
+- **For 15 cm range:** $\approx 8.6 \text{ m/s}$
+- **For 25 cm range:** $\approx 14.3 \text{ m/s}$
 
 The dual DC motors and flywheel diameters were chosen and tuned specifically to impart an exit velocity within this 8.6 m/s to 14.3 m/s window.
 
@@ -95,22 +95,22 @@ The dual DC motors and flywheel diameters were chosen and tuned specifically to 
 ## 6. Hardware & Components
 
 ### TurtleBot3 Subcomponents
-* LiDAR (LDS-02)
-* RaspberryPi & OpenCR 1.0
-* 2x Dynamixel motors & LiPo Battery
+- LiDAR (LDS-02)
+- RaspberryPi & OpenCR 1.0
+- 2x Dynamixel motors & LiPo Battery
 
 ### Custom Bill of Materials (BOM)
-* 1x SG90 Servo Motor (for feeder gate)
-* **2x** RF300FA-12350 DC Motors (for dual flywheels)
-* 1x L298N Motor Driver
-* Standard M4 Bolts, Nuts, and Threaded Inserts
-* BambuLab PLA Filament (1kg)
+- 1x SG90 Servo Motor (for feeder gate)
+- **2x** RF300FA-12350 DC Motors (for dual flywheels)
+- 1x L298N Motor Driver
+- Standard M4 Bolts, Nuts, and Threaded Inserts
+- BambuLab PLA Filament (1kg)
 
 ### Custom 3D Printed Parts
-* Flywheel Housing (includes dual motor mounts and servo gate mount)
-* Compact Internal Ball Storage Module
-* **2x** Flywheels
-* Feeder Roller Arm
+- Flywheel Housing (includes dual motor mounts and servo gate mount)
+- Compact Internal Ball Storage Module
+- **2x** Flywheels
+- Feeder Roller Arm
 
 **[Insert an exploded CAD view showing all 3D printed parts separated, highlighting the compact storage and two flywheels]**
 
@@ -141,8 +141,8 @@ The dual DC motors and flywheel diameters were chosen and tuned specifically to 
 
 ## 8. Assembly Best Practices & Troubleshooting
 
-* **Wiring & Routing:** Install the L298N motor driver, route the DC motor power cables, and manage the servo wiring *before* fully bolting down the launcher housing. Doing this after assembly is extremely difficult.
-* **Dual Flywheel Tuning:** Both flywheels must spin at the exact same RPM. If one motor receives slightly more power than the other, the ball will curve out of the launcher (similar to a curveball in baseball). Use the L298N motor driver's PWM outputs to fine-tune and match the speeds.
-* **Flywheel Alignment:** Ensure both flywheels are perfectly parallel to the shooting tube. Angular misalignment will introduce friction and cause inconsistent shots.
-* **Servo Zeroing:** Before screwing the rotating arm onto the servo, write a quick test script to set the servo to its "neutral" (blocking) position. Mount the arm so it correctly blocks the ball in this state.
-* **Clearances:** Double-check that no wires or custom parts are clipping into the LiDAR's rotational path.
+- **Wiring & Routing:** Install the L298N motor driver, route the DC motor power cables, and manage the servo wiring *before* fully bolting down the launcher housing. Doing this after assembly is extremely difficult.
+- **Dual Flywheel Tuning:** Both flywheels must spin at the exact same RPM. If one motor receives slightly more power than the other, the ball will curve out of the launcher (similar to a curveball in baseball). Use the L298N motor driver's PWM outputs to fine-tune and match the speeds.
+- **Flywheel Alignment:** Ensure both flywheels are perfectly parallel to the shooting tube. Angular misalignment will introduce friction and cause inconsistent shots.
+- **Servo Zeroing:** Before screwing the rotating arm onto the servo, write a quick test script to set the servo to its "neutral" (blocking) position. Mount the arm so it correctly blocks the ball in this state.
+- **Clearances:** Double-check that no wires or custom parts are clipping into the LiDAR's rotational path.
