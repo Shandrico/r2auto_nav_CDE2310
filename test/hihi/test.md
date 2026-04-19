@@ -170,3 +170,13 @@ The dual DC motors and flywheel diameters were chosen and tuned specifically to 
     </tr>
   </table>
 </div>
+
+
+<div align="center">
+
+| Before | After |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/68498098-e84f-4cf0-8534-6f6b0e04d588" width="350" /> | <img src="https://github.com/user-attachments/assets/27c9b4cc-286f-4e36-b1bc-f77a86a57490" width="350" /> |
+| *Original housing with vibration issues* | *Extended housing bolted to chassis* |
+
+</div>
