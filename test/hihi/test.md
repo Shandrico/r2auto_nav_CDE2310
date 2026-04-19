@@ -7,7 +7,7 @@ This document outlines the design, iteration, and assembly of the custom payload
 ## 1. System Overview
 
 The mechanical subsystem is designed to securely transport and fire ping pong balls into a docking receptacle. The system consists of:
-- A **compact, internally mounted ball storage module** that securely holds 9 balls between the robot's structural layers.
+- A **compact, internally mounted launching mechanism** that securely holds the flywheel and feeder in between the robot's structural layers.
 - A **gravity-assisted, servo-controlled feeder** with a rotating arm for precise, single-ball release.
 - A **dual-flywheel launcher** integrated directly into the robot's internal structural layers to ensure a straight, spin-free launch.
 - A low-profile design that maintains the **LiDAR sensor in its original, unobstructed position**.
@@ -19,7 +19,7 @@ The mechanical subsystem is designed to securely transport and fire ping pong ba
 ## 2. Problem Description & Design Requirements
 
 To successfully complete the docking and firing tasks, the mechanical subsystem had to satisfy several strict constraints:
-- **Payload Capacity:** Store exactly nine 2.7g ping pong balls securely without them escaping during dynamic motion or inclined navigation.
+- **Payload Capacity:** Store exactly nine 2.7g ping pong balls securely without them escaping during movement or navigation
 - **Dimensional Constraints:** Maintain a narrow overall footprint to ensure the robot can navigate tight maze environments without collision.
 - **Sensor Clearance:** Ensure zero obstruction to the 360° field of view of the LDS-02 LiDAR without requiring external sensor mounts or height modifications.
 - **Launch Kinematics:** Fire balls horizontally across a 15–25 cm docking gap with minimal vertical drop, ensuring they land cleanly inside a receptacle positioned at 149.5 mm from the ground.
@@ -57,16 +57,19 @@ Our final design is the result of testing and refining several prototypes to sol
 - **Design:** A full spiral ball storage track feeding into a launcher mounted at the very front of the TurtleBot.
 - **Problem:** The robot became heavily front-biased, risking tipping. Additionally, feeding the ball to the front required a sharp 90-degree bend in the internal tubing, which caused severe jamming and made the feeding mechanism overly complex.
 
+
 ### Iteration 2: Side-Mounted Launcher with 0.75x Spiral
 - **Design:** We reduced the spiral to 0.75 revolutions so the track ended in a straight path. We extended this path to a side-mounted launcher pointing forward.
 - **Problem:** This resulted in an asymmetrical footprint (the robot was "fat" on one side). This extra width severely limited the robot's ability to navigate tight maze corridors and made aligning for docking highly inconsistent.
 
-### Iteration 3 (Final): Centered & Layer-Integrated
+
+### Iteration 3: Centered & Layer-Integrated
 - **Design:** We abandoned the spiral storage concept entirely. We centered the dual-flywheel launching mechanism and embedded a compact ball storage module tightly between the TurtleBot's structural plates. 
 - **Result:** This eliminated the asymmetrical width, completely resolved the 90-degree feed jamming issue, and perfectly balanced the center of gravity. Furthermore, the internal embedding successfully prevented any vertical stacking that would block the LiDAR, eliminating the need to modify the sensor's stock height.
 
-### Minor Refinements
-- **Structural Flexing:** The added custom layer introduced slight flex. **Fix:** Reinforced the 3D-printed supports and anchored everything using standard M4 fasteners.
+### Iteration 4: Stability Improvement
+- **Design:** We extended the rear of the 3D-printed flywheel housing so that it sits flush against the TurtleBot's rear hex supports, allowing the housing to be directly bolted and tightened to the chassis.
+- **Result:** This structural anchoring eliminated the vibrations caused by the rotational inertia of the spinning LiDAR. The robot's overall steadiness was restored, providing a rigid base for the launching mechanism and ensuring consistent docking and firing operations.
 
 **[Insert an image showing a side-by-side comparison of the early asymmetrical prototype vs. the final centered layout]**
 
