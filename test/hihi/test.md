@@ -155,14 +155,18 @@ The dual DC motors and flywheel diameters were chosen and tuned specifically to 
 
 
 <div align="center">
-  <div style="display: inline-block; vertical-align: top; margin: 10px;">
-    <strong>Before</strong><br>
-    <img src="https://github.com/user-attachments/assets/68498098-e84f-4cf0-8534-6f6b0e04d588" width="320"><br>
-    <em>Unstable housing</em>
-  </div>
-  <div style="display: inline-block; vertical-align: top; margin: 10px;">
-    <strong>After</strong><br>
-    <img src="https://github.com/user-attachments/assets/27c9b4cc-286f-4e36-b1bc-f77a86a57490" width="320"><br>
-    <em>Structural anchoring added</em>
-  </div>
+  <table border="0">
+    <tr>
+      <td align="center">
+        <b>Before</b><br>
+        <img src="https://github.com/user-attachments/assets/68498098-e84f-4cf0-8534-6f6b0e04d588" width="300"><br>
+        <sub>Vibration issues due to lack of support</sub>
+      </td>
+      <td align="center">
+        <b>After</b><br>
+        <img src="https://github.com/user-attachments/assets/27c9b4cc-286f-4e36-b1bc-f77a86a57490" width="300"><br>
+        <sub>Rigid anchoring to hex supports</sub>
+      </td>
+    </tr>
+  </table>
 </div>
