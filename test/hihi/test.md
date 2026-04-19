@@ -144,6 +144,7 @@ The dual DC motors and flywheel diameters were chosen and tuned specifically to 
 5.  **Finalize Assembly:** Reattach the Layer 4 waffle plate onto the extended hex supports, ensuring the LiDAR sensor remains in its stock configuration on top.
 
 ---
+ngetes wae
 
 ## 8. Assembly Best Practices & Troubleshooting
 
