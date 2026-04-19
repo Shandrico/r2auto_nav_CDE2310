@@ -152,3 +152,17 @@ The dual DC motors and flywheel diameters were chosen and tuned specifically to 
 - **Flywheel Alignment:** Ensure both flywheels are perfectly parallel to the shooting tube. Angular misalignment will introduce friction and cause inconsistent shots.
 - **Servo Zeroing:** Before screwing the rotating arm onto the servo, write a quick test script to set the servo to its "neutral" (blocking) position. Mount the arm so it correctly blocks the ball in this state.
 - **Clearances:** Double-check that no wires or custom parts are clipping into the LiDAR's rotational path.
+
+
+<div align="center">
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <strong>Before</strong><br>
+    <img src="https://github.com/user-attachments/assets/68498098-e84f-4cf0-8534-6f6b0e04d588" width="320"><br>
+    <em>Unstable housing</em>
+  </div>
+  <div style="display: inline-block; vertical-align: top; margin: 10px;">
+    <strong>After</strong><br>
+    <img src="https://github.com/user-attachments/assets/27c9b4cc-286f-4e36-b1bc-f77a86a57490" width="320"><br>
+    <em>Structural anchoring added</em>
+  </div>
+</div>
